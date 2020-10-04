@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package post;
+
+message Post {
+  string title = 1;
+  string body = 2;
+  int32 likes = 3;
+  // Image should be sent as Base64
+  string image = 4;
+  bool premium = 5;
+
+  Author author = 6;
+
+  message Author {
+    string id = 1;
+    string name = 2;
+  }
+}
